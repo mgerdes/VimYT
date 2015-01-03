@@ -8,7 +8,7 @@ import json
 
 search_string = vim.eval("a:search_string").replace(" ", "+")
 URL = "https://gdata.youtube.com/feeds/api/videos?v=2&alt=jsonc&q=" + search_string
-TIMEOUT = 20
+TIMEOUT = 10
 
 try:
 	response = urllib2.urlopen(URL, None, TIMEOUT).read()
